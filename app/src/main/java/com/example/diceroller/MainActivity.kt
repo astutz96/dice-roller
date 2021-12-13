@@ -12,8 +12,29 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val rollButton: Button = findViewById(R.id.button)
 
-        rollButton.setOnClickListener { rollDice() }
+        rollButton.setOnClickListener { doLuckyNum() }
 
+    }
+
+    private fun doLuckyNum() {
+        val myFirstDice = Dice(6)
+        val rollResult = myFirstDice.roll()
+        //println("Your ${myFirstDice.numSides} sided dice rolled ${rollResult}!")
+
+        val luckyNum = 4
+        if (rollResult == luckyNum) {
+            println("You win!")
+        } else if (rollResult == 1) {
+            println("So sorry! You rolled a 1. Try again!")
+        } else if (rollResult == 2) {
+            println("Sadly, you rolled a 2. Try again!")
+        } else if (rollResult == 3) {
+            println("Unfortunately, you rolled a 3. Try again!")
+        } else if (rollResult == 5) {
+            println("Don't cry! You rolled a 5. Try again!")
+        } else {
+            println("Apologies! You rolled a 6. Try again!")
+        }
     }
 
     private fun rollDice() {
