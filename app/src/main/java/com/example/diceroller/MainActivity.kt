@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 //            println("Apologies! You rolled a 6. Try again!")
 //        }
 
-        when (rollResult){
+        when (rollResult) {
             luckyNum -> println("You won!")
             1 -> println("So sorry! You rolled a 1. Try again!")
             2 -> println("Sadly, you rolled a 2. Try again!")
