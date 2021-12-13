@@ -10,17 +10,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val rollButton : Button = findViewById(R.id.button)
+        val rollButton: Button = findViewById(R.id.button)
 
-        rollButton.setOnClickListener{
-            rollDice()
-        }
+        rollButton.setOnClickListener { rollDice() }
 
     }
 
     private fun rollDice() {
         val dice = Dice(6)
-        val rollVal : Int = dice.roll()
+        val rollVal: Int = dice.roll()
         val resultTextView: TextView = findViewById(R.id.textView)
         resultTextView.text = rollVal.toString()
     }
