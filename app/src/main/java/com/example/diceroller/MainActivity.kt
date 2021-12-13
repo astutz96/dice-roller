@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,7 +49,7 @@ class MainActivity : AppCompatActivity() {
     private fun rollDice() {
         val dice = Dice(6)
         val rollVal: Int = dice.roll()
-        val resultTextView: TextView = findViewById(R.id.textView)
-        resultTextView.text = rollVal.toString()
+        //val resultTextView: TextView = findViewById(R.id.imageView)
+        //resultTextView.text = rollVal.toString()
     }
 }
