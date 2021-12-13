@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun doLuckyNum() {
-        val myFirstDice = Dice(6)
+        val myFirstDice = Dice(8)
         val rollResult = myFirstDice.roll()
         //println("Your ${myFirstDice.numSides} sided dice rolled ${rollResult}!")
 
@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
             3 -> println("Unfortunately, you rolled a 3. Try again!")
             5 -> println("Don't cry! You rolled a 5. Try again!")
             6 -> println("Apologies! You rolled a 6. Try again!")
+            else -> println("HI")
         }
     }
 
